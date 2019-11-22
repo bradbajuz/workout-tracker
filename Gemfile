@@ -41,6 +41,8 @@ group :development do
   gem 'spring'
   gem 'spring-watcher-listen', '~> 2.0.0'
 
+  gem 'bullet'
+  gem 'rubocop'
   gem 'htmlbeautifier'
   gem 'rufo', '~> 0.7.0', require: false
 end
