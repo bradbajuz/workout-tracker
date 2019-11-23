@@ -1,0 +1,14 @@
+<fieldset>
+  <div class= 'form-group'>
+    <%= f.label :name, 'Exercise Name' %>
+    <%= f.collection_select :exercise_id, Exercise.all, :id, :name, prompt: 'Please Select', class: 'form-control' %>
+  </div>
+  <%= f.label :adjustment_point, 'Adjustment Point' %>
+  <%= f.number_field :adjustment_point, class: 'form-control' %>
+  <%= f.label :date, 'Date' %>
+  <%= f.text_field :text_field, class: 'form-control' %>
+  <%= f.label :weight, 'Weight' %>
+  <%= f.number_field :weight, step: '0.01', class: 'form-control' %>
+  <%= f.label :time, 'Time' %>
+  <%= f.time_field :time, class: 'form-control' %>
+</fieldset>
