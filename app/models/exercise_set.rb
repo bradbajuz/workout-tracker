@@ -1,4 +1,6 @@
 class ExerciseSet < ApplicationRecord
-  belongs_to :workout
+  belongs_to :workout, inverse_of: :exercise_sets
   belongs_to :exercise
+
+  validates_presence_of :workout
 end
