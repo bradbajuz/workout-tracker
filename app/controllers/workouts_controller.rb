@@ -13,10 +13,10 @@ class WorkoutsController < ApplicationController
     respond_to do |format|
       if @workout.save
         format.html { redirect_to workouts_path, notice: "Workout was successfully created." }
-        # puts @workout.errors.inspect
+        puts @workout.errors.inspect
       else
         format.html { render :new, error: "Error creating workout. Please try again." }
-        # puts @workout.errors.inspect
+        puts @workout.errors.inspect
       end
     end
   end
@@ -25,6 +25,6 @@ class WorkoutsController < ApplicationController
 
   def workout_params
     params.require(:workout).permit(:name,
-                                    exercise_sets_attributes: [:id, :workout_id, :adjustment_point, :date, :weight, :time])
+                                    exercise_sets_attributes: [:id, :workout_id, :exercise_id, :adjustment_point, :date, :weight, :time])
   end
 end

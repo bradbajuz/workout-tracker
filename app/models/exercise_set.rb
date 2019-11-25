@@ -3,4 +3,5 @@ class ExerciseSet < ApplicationRecord
   belongs_to :exercise
 
   validates_presence_of :workout
+  validates_presence_of :exercise
 end

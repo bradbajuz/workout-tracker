@@ -1,0 +1,13 @@
+<div class='card'>
+  <div class='card-header'>
+    New Exercise
+  </div>
+  <div class='card-body'>
+    <%= render partial: 'form', locals: {exercise: @exercise} %>
+  </div>
+  <div class='card-footer'>
+    <div class='float-right'>
+      <button type="submit" class="btn btn-sm btn-primary" aria-hidden="true" form="exercise_form">Save</button>
+    </div>
+  </div>
+</div>
