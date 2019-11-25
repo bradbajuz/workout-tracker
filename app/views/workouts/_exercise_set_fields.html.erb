@@ -5,8 +5,12 @@
   </div>
   <%= f.label :adjustment_point, 'Adjustment Point' %>
   <%= f.number_field :adjustment_point, class: 'form-control' %>
-  <%= f.label :date, 'Date' %>
-  <%= f.text_field :date, class: 'form-control' %>
+  <div class='form-group'>
+    <%= f.label :date, 'Date' %>
+    <div class='form-inline'>
+      <%= f.text_field :date, class: 'form-control datepicker' %>
+    </div>
+  </div>
   <%= f.label :weight, 'Weight' %>
   <%= f.number_field :weight, step: '0.01', class: 'form-control' %>
   <%= f.label :time, 'Time' %>

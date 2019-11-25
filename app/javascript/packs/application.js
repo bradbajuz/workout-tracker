@@ -9,6 +9,9 @@ require("@rails/activestorage").start();
 require("channels");
 require("jquery");
 require("bootstrap");
+require("flatpickr");
+
+require("packs/flatpickr");
 import "../src/style.scss";
 
 
