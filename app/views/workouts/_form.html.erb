@@ -1,6 +1,8 @@
 <%= form_for workout, html: {id: 'workout_form', class: 'col'} do |f| %>
-  <%= f.label :name, 'Workout Name' %>
-  <%= f.text_field :name, class: 'form-control' %>
+  <div class='form-group'>
+    <%= f.label :name, 'Workout Name' %>
+    <%= f.text_field :name, class: 'form-control' %>
+  </div>
   <%= f.fields_for :exercise_sets do |builder| %>
     <%= render 'exercise_set_fields', f: builder %>
   <% end %>

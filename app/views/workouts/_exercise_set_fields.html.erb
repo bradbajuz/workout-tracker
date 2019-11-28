@@ -1,18 +1,30 @@
 <fieldset>
-  <div class= 'form-group'>
-    <%= f.label :name, 'Exercise Name' %>
-    <%= f.collection_select :exercise_id, Exercise.all, :id, :name, prompt: 'Please Select', class: 'form-control' %>
-  </div>
-  <%= f.label :adjustment_point, 'Adjustment Point' %>
-  <%= f.number_field :adjustment_point, class: 'form-control' %>
-  <div class='form-group'>
-    <%= f.label :date, 'Date' %>
-    <div class='form-inline'>
-      <%= f.text_field :date, class: 'form-control datepicker' %>
+  <div class='form-row'>
+    <div class= 'form-group col-md-4'>
+      <%= f.label :name, 'Exercise Name' %>
+      <div class='form-inline'>
+        <%= f.collection_select :exercise_id, Exercise.all, :id, :name, {}, prompt: 'Please Select', class: 'form-control' %>
+      </div>
+    </div>
+    <div class='form-group col-md-4'>
+      <%= f.label :adjustment_point, 'Adjustment Point' %>
+      <%= f.number_field :adjustment_point, class: 'form-control' %>
+    </div>
+    <div class='form-group col-md-4'>
+      <%= f.label :date, 'Date' %>
+      <div class='form-inline'>
+        <%= f.text_field :date, class: 'form-control datepicker' %>
+      </div>
     </div>
   </div>
-  <%= f.label :weight, 'Weight' %>
-  <%= f.number_field :weight, step: '0.01', class: 'form-control' %>
-  <%= f.label :time, 'Time' %>
-  <%= f.time_field :time, class: 'form-control stopwatchpicker' %>
+  <div class=form-row>
+    <div class='form-group col-md-6'>
+      <%= f.label :weight, 'Weight' %>
+      <%= f.number_field :weight, step: '0.01', class: 'form-control' %>
+    </div>
+    <div class='form-group col-md-6'>
+      <%= f.label :time, 'Time' %>
+      <%= f.time_field :time, class: 'form-control stopwatchpicker' %>
+    </div>
+  </div>
 </fieldset>
