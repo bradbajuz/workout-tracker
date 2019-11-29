@@ -1,8 +1,21 @@
 <h1>Workouts</h1>
-<%= link_to 'New Workout', new_workout_path, class: 'btn btn-primary' %>
-<%= link_to 'New Exercise', new_exercise_path, class: 'btn btn-primary' %>
+
 <div class="row">
   <div class="col-sm-6">
+    <div class="card">
+      <div class="card-body">
+        <h5 class="card-title">Workouts</h5>
+        <%= link_to 'New Workout', new_workout_path, class: 'btn btn-primary' %>
+      </div>
+    </div>
+  </div>
+
+  <div class="col-sm-6">
+    <div class="card">
+      <div class="card-body">
+        <h5 class="card-title">Exercises</h5>
+        <%= link_to 'New Exercise', new_exercise_path, class: 'btn btn-primary' %>
+      </div>
+    </div>
   </div>
 </div>
-
