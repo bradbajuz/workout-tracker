@@ -4,7 +4,7 @@ class CreateExerciseSets < ActiveRecord::Migration[6.0]
       t.integer :adjustment_point
       t.date :date
       t.decimal :weight
-      t.time :time
+      t.string :time
       t.references :workout, null: false, foreign_key: true
       t.references :exercise, null: false, foreign_key: true
 

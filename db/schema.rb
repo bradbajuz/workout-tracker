@@ -19,7 +19,7 @@ ActiveRecord::Schema.define(version: 2019_11_17_180437) do
     t.integer "adjustment_point"
     t.date "date"
     t.decimal "weight"
-    t.time "time"
+    t.string "time"
     t.bigint "workout_id", null: false
     t.bigint "exercise_id", null: false
     t.datetime "created_at", precision: 6, null: false
