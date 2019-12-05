@@ -4,4 +4,8 @@ class ExerciseSet < ApplicationRecord
 
   validates_presence_of :workout
   validates_presence_of :exercise
+
+  scope :ordered, lambda {
+    select('DISTINCT ON (exercise_id) *')
+  }
 end

@@ -12,6 +12,7 @@ require("bootstrap");
 require("flatpickr");
 
 require("packs/flatpickr");
+require("packs/workouts");
 import "../src/style.scss";
 
 

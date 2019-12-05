@@ -1,6 +1,7 @@
 <h1>Workouts</h1>
 
 <div class="row">
+
   <div class="col-sm-6">
     <div class="card">
       <div class="card-body">
@@ -27,4 +28,36 @@
       </div>
     </div>
   </div>
+
+  <div class="col-md-12">
+    <% @workouts.each do |workout| %>
+      <h5><%= workout.name %></h5>
+      <div class="table-responsive-sm">
+        <table class="table table-hover">
+          <thead>
+          <tr>
+            <th scope="col">#</th>
+            <th scope="col">Exercise</th>
+            <th scope="col">Weight</th>
+          </tr>
+          </thead>
+          <tbody>
+          <% workout.exercise_sets.ordered.each_with_index do |exercise_set, index| %>
+            <tr data-link="<%= new_exercise_set_path %>">
+              <th scope="row"><%= index + 1 %></th>
+              <td>
+                <%= exercise_set.exercise.name %>
+                <% if exercise_set.adjustment_point.present? %>
+                  (<%= exercise_set.adjustment_point %>)
+                <% end %>
+              </td>
+              <td><%= exercise_set.weight %></td>
+            </tr>
+          <% end %>
+          </tbody>
+        </table>
+      </div>
+    <% end %>
+  </div>
+
 </div>
