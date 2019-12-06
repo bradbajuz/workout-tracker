@@ -2,6 +2,7 @@ class WorkoutsController < ApplicationController
   def index
     @workouts = Workout.all
 
+    @today = ExerciseSet.where(date: Date.today).order(date: :desc)
   end
 
   def new

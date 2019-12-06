@@ -5,6 +5,9 @@ class ExerciseSet < ApplicationRecord
   validates_presence_of :workout
   validates_presence_of :exercise
 
+  scope :today, lambda {
+    order(date: :desc)
+  }
   scope :ordered, lambda {
     select('DISTINCT ON (exercise_id) *')
   }
