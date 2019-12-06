@@ -1,25 +1,18 @@
 <%= form_for exercise_set, html: {id: 'exercise_set_form', class: 'col'} do |f| %>
   <div class="form-row">
-    <div class="form-group col-md-6">
+    <div class="form-group col-md-4">
       <%= f.label :name, 'Workout Name' %>
       <div class="form-inline">
         <%= f.collection_select :workout_id, Workout.all, :id, :name, {prompt: 'Please Select'}, class: 'form-control' %>
       </div>
     </div>
-    <div class="form-group col-md-6">
+    <div class="form-group col-md-4">
       <%= f.label :name, 'Exercise Name' %>
       <div class="form-inline">
         <%= f.collection_select :exercise_id, Exercise.all, :id, :name, {prompt: 'Please Select'}, class: 'form-control' %>
       </div>
     </div>
-  </div>
-
-  <div class="form-row">
-    <div class="form-group col-md-6">
-      <%= f.label :adjustment_point, 'Adjustment Point' %>
-      <%= f.number_field :adjustment_point, class: 'form-control' %>
-    </div>
-    <div class="form-group col-md-6">
+    <div class="form-group col-md-4">
       <%= f.label :date, 'Date' %>
       <div class='form-inline'>
         <%= f.text_field :date, class: 'form-control datepicker' %>
