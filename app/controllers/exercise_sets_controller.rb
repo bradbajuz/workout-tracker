@@ -2,6 +2,8 @@ class ExerciseSetsController < ApplicationController
   def new
     @exercise_set = ExerciseSet.new(exercise_id: params[:exercise_id],
                                     workout_id: params[:workout_id])
+
+    @exercises = ExerciseSet.where(exercise_id: params[:exercise_id]).order(date: :desc).limit(10)
   end
 
   def create
