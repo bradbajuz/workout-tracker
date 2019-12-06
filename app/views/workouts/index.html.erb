@@ -8,34 +8,13 @@
   </div>
 </div>
 
-<div class="row">
-  <div class="col-sm-6">
-    <div class="card">
-      <div class="card-body">
-        <h5 class="card-title">Workouts</h5>
-        <%= link_to 'New Workout', new_workout_path, class: 'btn btn-primary' %>
-      </div>
-    </div>
-  </div>
-
-  <div class="col-sm-6">
-    <div class="card">
-      <div class="card-body">
-        <h5 class="card-title">Exercises</h5>
-        <%= link_to 'New Exercise', new_exercise_path, class: 'btn btn-primary' %>
-      </div>
-    </div>
-  </div>
-
-  <div class="col-sm-6">
-    <div class="card">
-      <div class="card-body">
-        <h5 class="card-title">Exercise Sets</h5>
-        <%= link_to 'New Exercise Set', new_exercise_set_path, class: 'btn btn-primary' %>
-      </div>
-    </div>
-  </div>
+<div class="btn-group" role="group" aria-label="Workout Buttons">
+  <%= link_to 'New Workout', new_workout_path, class: 'btn btn-primary' %>
+  <%= link_to 'New Exercise', new_exercise_path, class: 'btn btn-primary' %>
+  <%= link_to 'New Exercise Set', new_exercise_set_path, class: 'btn btn-primary' %>
 </div>
+
+<hr>
 
 <div class="row">
   <div class="col-md-12">
