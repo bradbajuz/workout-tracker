@@ -43,7 +43,7 @@
           </thead>
           <tbody>
           <% workout.exercise_sets.ordered.each_with_index do |exercise_set, index| %>
-            <tr data-link="<%= new_exercise_set_path %>">
+            <tr data-link="<%= new_exercise_set_path(exercise_id: exercise_set.exercise_id, workout_id: exercise_set.workout_id) %>">
               <th scope="row"><%= index + 1 %></th>
               <td>
                 <%= exercise_set.exercise.name %>

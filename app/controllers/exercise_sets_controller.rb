@@ -1,6 +1,7 @@
 class ExerciseSetsController < ApplicationController
   def new
-    @exercise_set = ExerciseSet.new
+    @exercise_set = ExerciseSet.new(exercise_id: params[:exercise_id],
+                                    workout_id: params[:workout_id])
   end
 
   def create
