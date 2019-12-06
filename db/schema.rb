@@ -16,7 +16,6 @@ ActiveRecord::Schema.define(version: 2019_11_17_180437) do
   enable_extension "plpgsql"
 
   create_table "exercise_sets", force: :cascade do |t|
-    t.integer "adjustment_point"
     t.date "date"
     t.decimal "weight"
     t.string "time"
@@ -30,6 +29,7 @@ ActiveRecord::Schema.define(version: 2019_11_17_180437) do
 
   create_table "exercises", force: :cascade do |t|
     t.string "name", null: false
+    t.integer "adjustment_point"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
   end
