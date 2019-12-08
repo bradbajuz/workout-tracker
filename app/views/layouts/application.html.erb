@@ -12,7 +12,9 @@
   <body>
   <%= render partial: 'layouts/navigation' %>
   <div class='container'>
-      <%= yield %>
+    <%= render partial: 'layouts/flash_messages', flash: flash %>
+
+    <%= yield %>
     </div>
   </body>
 </html>
