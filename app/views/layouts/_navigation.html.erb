@@ -8,12 +8,35 @@
 
   <div class="collapse navbar-collapse" id="main-navbar-collapse">
     <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
-      <li class="nav-item <%= 'active' if current_page?(workouts_path) %>">
-        <%= link_to workouts_path, class: 'nav-link' do %>
-          Workouts
-        <% end %>
-      </li>
-    </ul>
-  </div>
+      <% if current_user %>
 
+        <li class="nav-item <%= 'active' if current_page?(workouts_path) %>">
+          <%= link_to workouts_path, class: 'nav-link' do %>
+            Workouts
+          <% end %>
+        </li>
+      <% end %>
+    </ul>
+
+    <% unless current_user %>
+      <%= link_to new_user_session_path do %>
+        <button class="btn btn-outline-success my-2 my-sm-0">Log In</button>
+      <% end %>
+    <% end %>
+
+    <% if current_user %>
+      <ul class="nav">
+        <li class="nav-item dropdown">
+          <a href="#" class="btn btn-sm btn-outline-success dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
+            <small><%= current_user.name %></small>
+          </a>
+          <div class="dropdown-menu dropdown-menu-lg-right">
+            <%= link_to 'Account Settings', edit_user_registration_path, class: 'dropdown-item' %>
+            <div class="dropdown-divider"></div>
+            <%= link_to 'Log Out', destroy_user_session_path, method: :delete, class: 'dropdown-item' %>
+          </div>
+        </li>
+      </ul>
+    <% end %>
+  </div>
 </nav>
