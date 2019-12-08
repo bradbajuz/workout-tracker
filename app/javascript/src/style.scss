@@ -1,3 +1,7 @@
+$nunito-font-path: '~nunito-fontface/fonts';
+@import "~nunito-fontface/css/nunito/sass/nunito-fontface-regular";
+$font-family-sans-serif: "nunito-Regular", "Helvetica Neue", Helvetica, Arial, sans-serif !default;
+
 @import "~bootstrap/scss/bootstrap";
 @import "~flatpickr/dist/flatpickr";
 
