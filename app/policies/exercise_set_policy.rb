@@ -1,0 +1,2 @@
+class ExerciseSetPolicy < ApplicationPolicy
+end

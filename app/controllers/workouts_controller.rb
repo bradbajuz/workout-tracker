@@ -8,11 +8,13 @@ class WorkoutsController < ApplicationController
 
   def new
     @workout = Workout.new
+    authorize @workout
     @workout.exercise_sets.build
   end
 
   def create
     @workout = Workout.new(workout_params)
+    authorize @workout
 
     respond_to do |format|
       if @workout.save
