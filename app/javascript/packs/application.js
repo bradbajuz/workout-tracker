@@ -13,6 +13,7 @@ require("flatpickr");
 
 require("packs/flatpickr");
 require("packs/workouts");
+require("packs/welcome");
 import "../src/style.scss";
 
 
