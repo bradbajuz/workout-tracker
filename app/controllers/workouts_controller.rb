@@ -1,5 +1,6 @@
 class WorkoutsController < ApplicationController
   def index
+    authorize :workout, :index?
     @workouts = Workout.all
 
     @today = ExerciseSet.where(date: Date.today).order(date: :desc)

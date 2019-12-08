@@ -1,7 +1,16 @@
 class ApplicationController < ActionController::Base
+  include Pundit
   before_action :configure_permitted_parameters, if: :devise_controller?
+  rescue_from Pundit::NotAuthorizedError, with: :user_not_authorized
+  rescue_from Pundit::NotDefinedError, with: :user_not_authorized unless Rails.env.development?
 
   private
+
+  def user_not_authorized(object)
+    flash[:error] = 'You are not authorized to perform this action.'
+    puts "Error: #{object}"
+    redirect_to(request.referer || root_path)
+  end
 
   def configure_permitted_parameters
     attributes = [:name]
