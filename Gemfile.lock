@@ -66,6 +66,7 @@ GEM
       activesupport (>= 3.0.0)
       uniform_notifier (~> 1.11)
     byebug (11.0.1)
+    chartkick (3.3.0)
     concurrent-ruby (1.1.5)
     crass (1.0.5)
     devise (4.7.1)
@@ -215,6 +216,7 @@ DEPENDENCIES
   bootsnap (>= 1.4.2)
   bullet
   byebug
+  chartkick
   devise
   htmlbeautifier
   jbuilder (~> 2.7)

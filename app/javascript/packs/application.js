@@ -10,6 +10,8 @@ require("channels");
 require("jquery");
 require("bootstrap");
 require("flatpickr");
+require("chartkick");
+require("chart.js");
 
 require("packs/flatpickr");
 require("packs/workouts");
