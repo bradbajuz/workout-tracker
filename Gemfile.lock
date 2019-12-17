@@ -155,6 +155,7 @@ GEM
     responders (3.0.0)
       actionpack (>= 5.0)
       railties (>= 5.0)
+    rollbar (2.22.1)
     rubocop (0.77.0)
       jaro_winkler (~> 1.5.1)
       parallel (~> 1.10)
@@ -230,6 +231,7 @@ DEPENDENCIES
   puma (~> 4.1)
   pundit
   rails (~> 6.0.1)
+  rollbar
   rubocop
   sass-rails (>= 6)
   scout_apm
