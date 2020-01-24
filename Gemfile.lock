@@ -175,8 +175,6 @@ GEM
       sprockets (> 3.0)
       sprockets-rails
       tilt
-    scout_apm (2.6.6)
-      parser
     spring (2.1.0)
     spring-watcher-listen (2.0.1)
       listen (>= 2.7, < 4.0)
@@ -234,7 +232,6 @@ DEPENDENCIES
   rollbar
   rubocop
   sass-rails (>= 6)
-  scout_apm
   spring
   spring-watcher-listen (~> 2.0.0)
   turbolinks (~> 5)
