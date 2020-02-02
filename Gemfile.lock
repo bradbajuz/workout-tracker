@@ -156,6 +156,7 @@ GEM
       actionpack (>= 5.0)
       railties (>= 5.0)
     rollbar (2.23.2)
+    rorvswild (1.4.7)
     rubocop (0.79.0)
       jaro_winkler (~> 1.5.1)
       parallel (~> 1.10)
@@ -230,6 +231,7 @@ DEPENDENCIES
   pundit
   rails (~> 6.0.1)
   rollbar
+  rorvswild
   rubocop
   sass-rails (>= 6)
   spring
