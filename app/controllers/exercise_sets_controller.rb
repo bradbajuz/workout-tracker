@@ -1,4 +1,9 @@
 class ExerciseSetsController < ApplicationController
+
+  def index
+    @exercise_sets = ExerciseSet.all.order(date: :desc)
+  end
+
   def new
     @exercise_set = ExerciseSet.new(exercise_id: params[:exercise_id],
                                     workout_id: params[:workout_id])
