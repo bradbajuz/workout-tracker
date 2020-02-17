@@ -4,6 +4,10 @@ class ApplicationController < ActionController::Base
   rescue_from Pundit::NotAuthorizedError, with: :user_not_authorized
   rescue_from Pundit::NotDefinedError, with: :user_not_authorized unless Rails.env.development?
 
+  def after_sign_in_path_for(_resource)
+    workouts_path
+  end
+
   private
 
   def user_not_authorized(object)
