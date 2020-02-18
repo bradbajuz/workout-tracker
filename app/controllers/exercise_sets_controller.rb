@@ -1,7 +1,6 @@
 class ExerciseSetsController < ApplicationController
-
   def index
-    @exercise_sets = ExerciseSet.all.order(date: :desc)
+    @pagy, @exercise_sets = pagy(ExerciseSet.all.order(date: :desc), items: 10)
   end
 
   def new

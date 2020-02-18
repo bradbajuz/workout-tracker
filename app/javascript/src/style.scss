@@ -8,3 +8,7 @@ $font-family-sans-serif: "nunito-Regular", "Helvetica Neue", Helvetica, Arial, s
 body {
   padding-top: 70px;
 }
+
+.pagy-bootstrap-nav {
+  @extend .d-flex, .justify-content-center;
+}
