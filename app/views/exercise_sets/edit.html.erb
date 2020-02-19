@@ -1,0 +1,25 @@
+<div class="card">
+  <div class="card-header text-center">
+    <div class="d-flex align-items-center">
+      <%= link_to 'javascript:history.back()' do %>
+        <button class="btn btn-sm btn-outline-secondary ml-auto">Cancel</button>
+      <% end %>
+      <div class="mx-auto w-100">Edit</div>
+      <button type="submit" class="btn btn-sm btn-primary ml-auto" aria-hidden="true" form="exercise_set_form">Save</button>
+    </div>
+  </div>
+  <div class="card-body">
+    <%= render partial: 'form', locals: {exercise_set: @exercise_set} %>
+  </div>
+  <div class="card-footer text-center">
+    <div class="d-flex align-items-center">
+
+      <div class="mx-auto w-100">
+        <%= link_to @exercise_set, data: {confirm: 'Do you want to delete this exercise set?'}, method: :delete do %>
+          <button class="btn btn-sm btn-danger ml-auto">Delete</button>
+        <% end %>
+      </div>
+    </div>
+  </div>
+</div>
+
