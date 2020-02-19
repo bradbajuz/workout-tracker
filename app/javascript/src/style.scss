@@ -11,4 +11,9 @@ body {
 
 .pagy-bootstrap-nav {
   @extend .d-flex, .justify-content-center;
+  margin: 0 0 40px;
 }
+
+//.pagination {
+//  @extend .pagination-sm
+//}

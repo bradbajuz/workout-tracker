@@ -102,7 +102,6 @@ require 'pagy/extras/bootstrap'
 # require 'pagy/extras/trim'
 
 
-
 # Pagy Variables
 # See https://ddnexus.github.io/pagy/api/pagy#variables
 # All the Pagy::VARS are set for all the Pagy instances but can be overridden
@@ -117,6 +116,7 @@ require 'pagy/extras/bootstrap'
 # Other Variables
 # See https://ddnexus.github.io/pagy/api/pagy#other-variables
 # Pagy::VARS[:size]       = [1,4,4,1]                       # default
+Pagy::VARS[:size] = []
 # Pagy::VARS[:page_param] = :page                           # default
 # Pagy::VARS[:params]     = {}                              # default
 # Pagy::VARS[:anchor]     = '#anchor'                       # example
