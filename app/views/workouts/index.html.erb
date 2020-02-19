@@ -19,38 +19,38 @@
 
 <div class="row">
   <div class="col-md-12">
-      <h5 class="text-center">Today</h5>
-      <div class="table-responsive-sm">
-        <table class="table table-bordered">
-          <thead class="thead-dark">
-          <tr>
-            <th scope="col">#</th>
-            <th scope="col">Workout</th>
-            <th scope="col">Exercise</th>
-            <th scope="col">Weight</th>
-            <th scope="col">Time</th>
-          </tr>
-          </thead>
-          <tbody>
-          <% @today.each_with_index do |exercise_set, index| %>
-            <% if exercise_set.date.today? %>
-              <tr>
-                <th scope="row"><%= index + 1 %></th>
-                <td><%= exercise_set.workout.name %></td>
-                <td>
-                  <%= exercise_set.exercise.name %>
-                  <% if exercise_set.exercise.adjustment_point.present? %>
-                    (<%= exercise_set.exercise.adjustment_point %>)
-                  <% end %>
-                </td>
-                <td><%= exercise_set.weight %></td>
-                <td><%= exercise_set.time %></td>
-              </tr>
-            <% end %>
+    <h5 class="text-center">Today</h5>
+    <div class="table-responsive-sm">
+      <table class="table table-hover table-bordered">
+        <thead class="thead-dark">
+        <tr>
+          <th scope="col">#</th>
+          <th scope="col">Workout</th>
+          <th scope="col">Exercise</th>
+          <th scope="col">Weight</th>
+          <th scope="col">Time</th>
+        </tr>
+        </thead>
+        <tbody>
+        <% @today.each_with_index do |exercise_set, index| %>
+          <% if exercise_set.date.today? %>
+            <tr data-link="<%= edit_exercise_set_path(exercise_set) %>">
+              <th scope="row"><%= index + 1 %></th>
+              <td><%= exercise_set.workout.name %></td>
+              <td>
+                <%= exercise_set.exercise.name %>
+                <% if exercise_set.exercise.adjustment_point.present? %>
+                  (<%= exercise_set.exercise.adjustment_point %>)
+                <% end %>
+              </td>
+              <td><%= exercise_set.weight %></td>
+              <td><%= exercise_set.time %></td>
+            </tr>
           <% end %>
-          </tbody>
-        </table>
-      </div>
+        <% end %>
+        </tbody>
+      </table>
+    </div>
   </div>
 </div>
 
