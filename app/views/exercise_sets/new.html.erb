@@ -1,18 +1,19 @@
 <div class="card">
-  <div class="card-header">
-    New Exercise Set
+  <div class="card-header text-center">
+    <div class="d-flex align-items-center">
+      <%= link_to 'javascript:history.back()' do %>
+        <button class="btn btn-sm btn-outline-secondary ml-auto">Cancel</button>
+      <% end %>
+      <div class="mx-auto w-100">New</div>
+      <button type="submit" class="btn btn-sm btn-primary ml-auto" aria-hidden="true" form="exercise_set_form">Save</button>
+    </div>
   </div>
   <div class="card-body">
     <%= render partial: 'form', locals: {exercise_set: @exercise_set} %>
   </div>
-  <div class="card-footer">
-    <div class="float-right">
-      <button type="submit" class="btn btn-sm btn-primary" aria-hidden="true" form="exercise_set_form">Save</button>
-    </div>
-  </div>
 </div>
 
-
+<!-- Exercise Set History -->
 <div class="row">
   <div class="col-md-12">
     <div class="table-responsive-sm">

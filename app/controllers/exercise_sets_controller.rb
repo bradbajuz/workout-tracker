@@ -6,6 +6,8 @@ class ExerciseSetsController < ApplicationController
   end
 
   def new
+    session[:return_to] = request.referer
+
     @exercise_set = ExerciseSet.new(exercise_id: params[:exercise_id],
                                     workout_id: params[:workout_id])
     authorize @exercise_set
