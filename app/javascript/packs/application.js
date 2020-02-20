@@ -17,7 +17,7 @@ require("chart.js");
 require("packs/flatpickr");
 require("packs/workouts");
 require("packs/welcome");
-import "../src/style.scss";
+import "../stylesheets/application.scss";
 
 
 // Uncomment to copy all static images under ../images to the output folder and reference
