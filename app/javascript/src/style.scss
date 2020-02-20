@@ -3,6 +3,7 @@ $nunito-font-path: '~nunito-fontface/fonts';
 $font-family-sans-serif: "nunito-Regular", "Helvetica Neue", Helvetica, Arial, sans-serif !default;
 
 @import "~bootstrap/scss/bootstrap";
+@import "~@fortawesome/fontawesome-free";
 @import "~flatpickr/dist/flatpickr";
 
 body {
