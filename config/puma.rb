@@ -6,11 +6,11 @@
 # the maximum value specified for Puma. Default is set to 5 threads for minimum
 # and maximum; this matches the default thread size of Active Record.
 
-workers Integer(ENV['WEB_CONCURRENCY'] || 1)
+workers Integer(ENV['WEB_CONCURRENCY'] || 0)
 threads_count = Integer(ENV['RAILS_MAX_THREADS'] || 5)
 threads threads_count, threads_count
 
-preload_app!
+# preload_app!
 
 rackup      DefaultRackup
 port        ENV['PORT']     || 3000
