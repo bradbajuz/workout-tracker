@@ -1,4 +1,4 @@
-class CreateExerciseSets < ActiveRecord::Migration[6.0]
+class CreateExerciseSets < ActiveRecord::Migration[7.0]
   def change
     create_table :exercise_sets do |t|
       t.date :date
