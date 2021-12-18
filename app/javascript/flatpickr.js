@@ -1,4 +1,4 @@
-document.addEventListener("turbolinks:load", () => {
+document.addEventListener("turbo:load", () => {
   flatpickr('.datepicker', {
     static: true,
     dateFormat: 'Y-m-d',

@@ -1,15 +1,27 @@
-<%= form_for exercise_set, html: {id: 'exercise_set_form', class: 'col'} do |f| %>
+<%= form_with(model: exercise_set, html: { id: 'exercise_set_form', class: 'col' }) do |f| %>
+  <% if exercise_set.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(exercise_set.errors.count, "error") %> prohibited this set from being saved:</h2>
+
+      <ul>
+        <% exercise_set.errors.full_messages.each do |message| %>
+          <li><%= message %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+
   <div class="form-row">
     <div class="form-group col-md-4">
       <%= f.label :name, 'Workout Name' %>
       <div class="form-inline">
-        <%= f.collection_select :workout_id, Workout.all, :id, :name, {prompt: 'Please Select'}, class: 'form-control' %>
+        <%= f.collection_select :workout_id, Workout.all, :id, :name, { prompt: 'Please Select' }, class: 'form-control' %>
       </div>
     </div>
     <div class="form-group col-md-4">
       <%= f.label :name, 'Exercise Name' %>
       <div class="form-inline">
-        <%= f.collection_select :exercise_id, Exercise.all, :id, :name, {prompt: 'Please Select'}, class: 'form-control' %>
+        <%= f.collection_select :exercise_id, Exercise.all, :id, :name, { prompt: 'Please Select' }, class: 'form-control' %>
       </div>
     </div>
     <div class="form-group col-md-4">

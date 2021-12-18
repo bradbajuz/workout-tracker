@@ -5,6 +5,10 @@ class ExerciseSet < ApplicationRecord
   validates_presence_of :workout
   validates_presence_of :exercise
 
+  validates :date, presence: true
+  validates :weight, presence: true
+  validates :time, presence: true
+
   scope :today, lambda {
     order(date: :desc)
   }
