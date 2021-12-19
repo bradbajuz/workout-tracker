@@ -9,41 +9,43 @@
     </div>
   </div>
   <div class="card-body">
-    <%= render partial: 'form', locals: {exercise_set: @exercise_set} %>
+    <%= render partial: 'form', locals: { exercise_set: @exercise_set } %>
   </div>
 </div>
 
 <!-- Exercise Set History -->
-<div class="row">
-  <div class="col-md-12">
-    <div class="table-responsive-sm">
-      <table class="table table-striped">
-        <thead class="thead-dark">
-        <tr>
-          <th scope="col">#</th>
-          <th scope="col">Date</th>
-          <th scope="col">Exercise</th>
-          <th scope="col">Weight</th>
-          <th scope="col">Time</th>
-        </tr>
-        </thead>
-        <tbody>
-        <% @exercises.each_with_index do |exercise, index| %>
+<% if @exercises.present? %>
+  <div class="row">
+    <div class="col-md-12">
+      <div class="table-responsive-sm">
+        <table class="table table-striped">
+          <thead class="thead-dark">
           <tr>
-            <th scope="row"><%= index + 1 %></th>
-            <td><%= exercise.date %></td>
-            <td>
-              <%= exercise.exercise.name %>
-              <% if exercise.exercise.adjustment_point.present? %>
-                (<%= exercise.exercise.adjustment_point %>)
-              <% end %>
-            </td>
-            <td><%= exercise.weight %></td>
-            <td><%= exercise.time %></td>
+            <th scope="col">#</th>
+            <th scope="col">Date</th>
+            <th scope="col">Exercise</th>
+            <th scope="col">Weight</th>
+            <th scope="col">Time</th>
           </tr>
-        <% end %>
-        </tbody>
-      </table>
+          </thead>
+          <tbody>
+          <% @exercises.each_with_index do |exercise, index| %>
+            <tr>
+              <th scope="row"><%= index + 1 %></th>
+              <td><%= exercise.date %></td>
+              <td>
+                <%= exercise.exercise.name %>
+                <% if exercise.exercise.adjustment_point.present? %>
+                  (<%= exercise.exercise.adjustment_point %>)
+                <% end %>
+              </td>
+              <td><%= exercise.weight %></td>
+              <td><%= exercise.time %></td>
+            </tr>
+          <% end %>
+          </tbody>
+        </table>
+      </div>
     </div>
   </div>
-</div>
+<% end %>

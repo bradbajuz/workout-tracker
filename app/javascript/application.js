@@ -1,9 +1,13 @@
 // Entry point for the build script in your package.json
-import "@hotwired/turbo-rails";
+import Rails from "@rails/ujs";
+import Turbolinks from "turbolinks";
 import jquery from "jquery";
 
+Rails.start();
+Turbolinks.start();
 window.jQuery = jquery;
 window.$ = jquery;
+
 import "bootstrap";
 import("flatpickr");
 import("chartkick");

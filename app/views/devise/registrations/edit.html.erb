@@ -19,7 +19,7 @@
       </div>
       <section class="card-body">
 
-        <%= form_for(resource, as: resource_name, url: registration_path(resource_name), html: {'data-turbo' => 'false', method: :put, id: 'account_form'}) do |f| %>
+        <%= form_for(resource, as: resource_name, url: registration_path(resource_name), html: { method: :put, id: 'account_form' }) do |f| %>
           <%= registration_error_messages! %>
 
           <div class="form-row">
@@ -60,7 +60,7 @@
         <% end %>
       </section>
       <footer class="card-footer">
-        <%= link_to 'Delete', registration_path(resource_name), data: {confirm: 'Are you sure?'}, class: "btn btn-danger", method: :delete %>
+        <%= link_to 'Delete', registration_path(resource_name), data: { confirm: 'Are you sure?' }, class: "btn btn-danger", method: :delete %>
         <div class="float-right">
           <%= link_to 'javascript:history.back()' do %>
             <button class="btn btn-outline-secondary">Cancel</button>

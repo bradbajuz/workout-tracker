@@ -23,7 +23,7 @@ class ExerciseSetsController < ApplicationController
       if @exercise_set.save
         format.html { redirect_to workouts_path, notice: 'Exercise Set was successfully created.' }
       else
-        format.html { render :new, status: :unprocessable_entity }
+        format.html { render :new, error: 'Error creating exercise set. Please try again.' }
       end
     end
   end
@@ -39,7 +39,7 @@ class ExerciseSetsController < ApplicationController
       if @exercise_set.update(exercise_set_params)
         format.html { redirect_to session[:return_to], notice: 'Exercise Set was successfully updated.' }
       else
-        format.html { render :edit, status: :unprocessable_entity }
+        format.html { render :edit }
       end
     end
   end
