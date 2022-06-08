@@ -7,13 +7,13 @@
     "@fortawesome/free-solid-svg-icons": "^6.1.0",
     "@rails/ujs": "^7.0.2-3",
     "bootstrap": "^4.6.0",
-    "chart.js": "^3.7.1",
-    "chartkick": "^4.1.1",
-    "esbuild": "^0.14.39",
+    "chart.js": "^3.8.0",
+    "chartkick": "^4.2.0",
+    "esbuild": "^0.14.43",
     "flatpickr": "^4.6.11",
     "jquery": "^3.4.1",
     "popper.js": "^1.16.0",
-    "sass": "^1.51.0",
+    "sass": "^1.52.2",
     "turbolinks": "^5.2.0"
   },
   "scripts": {
